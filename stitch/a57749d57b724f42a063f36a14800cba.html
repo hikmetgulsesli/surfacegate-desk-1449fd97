@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings and Preferences - SurfaceGate Desk</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#9c9af4",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#fcf8ff",
+                      "primary-fixed-dim": "#c3c0ff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#0b1c30",
+                      "on-surface": "#1b1b21",
+                      "on-error-container": "#93000a",
+                      "secondary": "#505f76",
+                      "outline-variant": "#c8c5d3",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#303036",
+                      "surface-tint": "#5654a8",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e5e1e9",
+                      "inverse-on-surface": "#f3eff7",
+                      "surface": "#fcf8ff",
+                      "secondary-container": "#d0e1fb",
+                      "on-tertiary-fixed-variant": "#70380b",
+                      "background": "#fcf8ff",
+                      "on-tertiary-container": "#de915e",
+                      "tertiary-fixed-dim": "#ffb688",
+                      "surface-container-low": "#f6f2fa",
+                      "on-secondary-fixed-variant": "#38485d",
+                      "primary-fixed": "#e2dfff",
+                      "secondary-fixed": "#d3e4fe",
+                      "tertiary-container": "#5f2b00",
+                      "surface-container-highest": "#e5e1e9",
+                      "tertiary-fixed": "#ffdbc7",
+                      "on-secondary-container": "#54647a",
+                      "outline": "#777682",
+                      "inverse-primary": "#c3c0ff",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "surface-container": "#f0ecf4",
+                      "primary-container": "#312e81",
+                      "primary": "#1a146b",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#dcd9e0",
+                      "on-primary": "#ffffff",
+                      "on-background": "#1b1b21",
+                      "on-primary-fixed": "#100563",
+                      "tertiary": "#3e1a00",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#474651",
+                      "surface-container-high": "#eae7ef",
+                      "on-primary-fixed-variant": "#3e3c8f",
+                      "on-tertiary-fixed": "#311300"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-padding-md": "16px",
+                      "unit": "4px",
+                      "max-width-desktop": "1440px",
+                      "container-padding-sm": "12px",
+                      "stack-sm": "8px",
+                      "stack-xs": "4px",
+                      "stack-md": "16px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "mono-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "11px",
+                              {
+                                      "lineHeight": "14px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "mono-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "30px",
+                              {
+                                      "lineHeight": "38px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom Checkbox styles for operational precision */
+        .form-checkbox {
+            appearance: none;
+            background-color: #fff;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 2px solid #CBD5E1;
+            border-radius: 0.125em;
+            display: grid;
+            place-content: center;
+        }
+        .form-checkbox::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em var(--form-control-color, #1a146b);
+            background-color: CanvasText;
+            transform-origin: center;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        }
+        .form-checkbox:checked::before {
+            transform: scale(1);
+        }
+        .form-checkbox:checked {
+            border-color: #1a146b;
+            background-color: #1a146b;
+        }
+        .form-checkbox:checked::before {
+             box-shadow: inset 1em 1em white;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim font-headline-sm text-headline-sm border-b border-outline-variant fixed top-0 left-0 w-full z-50 flex items-center justify-between px-container-padding-md h-12">
+<div class="flex items-center gap-gutter">
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">SurfaceGate Desk</span>
+<div class="relative hidden md:flex items-center ml-8">
+<span class="material-symbols-outlined absolute left-2 text-on-surface-variant text-[18px]">search</span>
+<input class="h-8 pl-8 pr-3 py-1 bg-surface-container-low border border-outline-variant rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/10 text-body-sm w-64 transition-all" placeholder="Search operational data..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 p-1.5 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 p-1.5 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="help">help</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 p-1.5 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="hidden md:flex bg-surface-container-low dark:bg-surface-container-lowest font-label-md text-label-md border-r border-outline-variant fixed left-0 top-12 h-[calc(100vh-48px)] flex-col z-40 w-64 transition-transform duration-200">
+<div class="p-container-padding-md border-b border-outline-variant/50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
+                    SG
+                </div>
+<div>
+<div class="font-headline-sm text-headline-sm font-black text-primary text-[14px] leading-tight">SurfaceGate Desk</div>
+<div class="text-label-sm text-on-surface-variant">Operational Center</div>
+</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto py-stack-md flex flex-col gap-1 px-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+                Operations
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="view_list">view_list</span>
+                Queue
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="group">group</span>
+                Workload
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="analytics">analytics</span>
+                Insights
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit_note">edit_note</span>
+                Editor
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-r border-l-4 border-primary bg-secondary-container text-on-secondary-container font-bold -ml-2 pl-4" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings" data-weight="fill">settings</span>
+                Settings
+            </a>
+</div>
+<div class="mt-auto border-t border-outline-variant/50 p-2 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="support_agent">support_agent</span>
+                Support
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="history">history</span>
+                Logs
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-12 md:pl-64 min-h-screen bg-surface-container-lowest">
+<!-- Header Section -->
+<div class="border-b border-outline-variant bg-surface sticky top-12 z-30">
+<div class="px-container-padding-md md:px-8 py-6 max-w-5xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface m-0 p-0">System Settings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Manage your workflow preferences, view settings, and default configurations.</p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<button class="px-4 h-8 flex items-center justify-center rounded bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors border border-outline-variant/50 shadow-sm">
+                        Cancel
+                    </button>
+<button class="px-4 h-8 flex items-center justify-center rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary/90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px] mr-1.5" data-icon="save">save</span>
+                        Save Changes
+                    </button>
+</div>
+</div>
+</div>
+<!-- Scrollable Settings Area -->
+<div class="p-container-padding-md md:p-8 max-w-5xl mx-auto space-y-8 pb-24">
+<!-- Workflow Preferences Bento -->
+<section>
+<div class="mb-4">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="route">route</span>
+                        Workflow Preferences
+                    </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configure automation rules and default states for operational efficiency.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Default Ticket Status -->
+<div class="bg-surface border border-outline-variant rounded-lg p-5">
+<label class="block font-label-md text-label-md text-on-surface mb-1">Default Ticket Status</label>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Initial state applied to incoming manual records.</p>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 bg-surface-container-lowest border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary/20 appearance-none font-body-sm text-body-sm text-on-surface">
+<option value="new">New (Unassigned)</option>
+<option selected="" value="triage">Triage Review</option>
+<option value="backlog">Backlog</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-on-surface-variant pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<!-- SLA Threshold -->
+<div class="bg-surface border border-outline-variant rounded-lg p-5">
+<label class="block font-label-md text-label-md text-on-surface mb-1">SLA Breach Notification</label>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Alert threshold before standard SLA violation.</p>
+<div class="flex items-center gap-3">
+<input class="w-20 h-9 px-3 bg-surface-container-lowest border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary/20 font-mono-sm text-mono-sm text-on-surface text-center" type="number" value="15"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">minutes prior to breach</span>
+</div>
+</div>
+<!-- Auto-Assignment Toggles -->
+<div class="bg-surface border border-outline-variant rounded-lg p-5 md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface mb-4">Automation Toggles</label>
+<div class="space-y-4">
+<label class="flex items-start gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox mt-0.5" type="checkbox"/>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface group-hover:text-primary transition-colors">Enable Round-Robin Assignment</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Automatically distribute incoming tickets to available agents in the primary queue.</div>
+</div>
+</label>
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="form-checkbox mt-0.5" type="checkbox"/>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface group-hover:text-primary transition-colors">Auto-close Stale Tickets</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Close 'Pending User' tickets automatically after 72 hours of inactivity.</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Display & Density -->
+<section>
+<div class="mb-4 pt-4 border-t border-outline-variant/30">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="desktop_windows">desktop_windows</span>
+                        Display &amp; Density
+                    </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Adjust visual settings for the operational dashboard.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface border border-outline-variant rounded-lg p-5">
+<label class="block font-label-md text-label-md text-on-surface mb-3">UI Density</label>
+<div class="grid grid-cols-2 gap-3">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="density" type="radio" value="compact"/>
+<div class="border border-outline-variant rounded p-3 text-center peer-checked:border-primary peer-checked:bg-primary/5 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined mb-1 text-on-surface-variant peer-checked:text-primary">view_headline</span>
+<div class="font-label-sm text-label-sm text-on-surface">Compact</div>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="density" type="radio" value="relaxed"/>
+<div class="border border-outline-variant rounded p-3 text-center peer-checked:border-primary peer-checked:bg-primary/5 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined mb-1 text-on-surface-variant peer-checked:text-primary">view_agenda</span>
+<div class="font-label-sm text-label-sm text-on-surface">Relaxed</div>
+</div>
+</label>
+</div>
+</div>
+<div class="bg-surface border border-outline-variant rounded-lg p-5">
+<label class="block font-label-md text-label-md text-on-surface mb-3">Theme</label>
+<div class="grid grid-cols-3 gap-3">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="theme" type="radio" value="light"/>
+<div class="border border-outline-variant rounded p-3 text-center peer-checked:border-primary peer-checked:bg-primary/5 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined mb-1 text-on-surface-variant peer-checked:text-primary">light_mode</span>
+<div class="font-label-sm text-label-sm text-on-surface">Light</div>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="theme" type="radio" value="dark"/>
+<div class="border border-outline-variant rounded p-3 text-center peer-checked:border-primary peer-checked:bg-primary/5 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined mb-1 text-on-surface-variant peer-checked:text-primary">dark_mode</span>
+<div class="font-label-sm text-label-sm text-on-surface">Dark</div>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="theme" type="radio" value="auto"/>
+<div class="border border-outline-variant rounded p-3 text-center peer-checked:border-primary peer-checked:bg-primary/5 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined mb-1 text-on-surface-variant peer-checked:text-primary">hdr_auto</span>
+<div class="font-label-sm text-label-sm text-on-surface">System</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Saved Filters -->
+<section>
+<div class="mb-4 pt-4 border-t border-outline-variant/30 flex justify-between items-end">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="filter_list">filter_list</span>
+                            Saved Filters
+                        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage your custom dashboard views.</p>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span> New Filter
+                    </button>
+</div>
+<div class="bg-surface border border-outline-variant rounded-lg overflow-hidden">
+<!-- Filter Row -->
+<div class="flex items-center justify-between p-3 border-b border-outline-variant/50 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">drag_indicator</span>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface">Critical VIP Incidents</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant">priority:P1 AND tags:VIP AND status:open</div>
+</div>
+</div>
+<div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="text-[10px] font-label-sm bg-primary/10 text-primary px-2 py-0.5 rounded mr-2">Default</span>
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Filter Row -->
+<div class="flex items-center justify-between p-3 border-b border-outline-variant/50 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] cursor-grab">drag_indicator</span>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface">My Assigned Backlog</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant">assignee:me AND status:backlog</div>
+</div>
+</div>
+<div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary mr-2">Set Default</button>
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Filter Row -->
+<div class="flex items-center justify-between p-3 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] cursor-grab">drag_indicator</span>
+<div>
+<div class="font-body-md text-body-md font-medium text-on-surface">Unassigned Hardware Requests</div>
+<div class="font-mono-sm text-mono-sm text-on-surface-variant">category:hardware AND assignee:null</div>
+</div>
+</div>
+<div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary mr-2">Set Default</button>
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Reset Controls -->
+<section class="mt-8 pt-8 border-t border-outline-variant/30 flex justify-between items-center bg-error-container/10 p-4 rounded-lg border border-error/20">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Factory Reset</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Restore all settings to system defaults. This cannot be undone.</p>
+</div>
+<button class="px-4 h-8 flex items-center justify-center rounded bg-surface text-error font-label-md text-label-md hover:bg-error/10 transition-colors border border-error/30 shrink-0">
+                    Reset Preferences
+                </button>
+</section>
+</div>
+</main>
+</body></html>

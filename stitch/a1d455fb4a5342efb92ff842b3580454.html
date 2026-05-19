@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Ticket #SG-4921 - SurfaceGate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#303036",
+                        "inverse-on-surface": "#f3eff7",
+                        "surface-container-low": "#f6f2fa",
+                        "surface-bright": "#fcf8ff",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#de915e",
+                        "background": "#fcf8ff",
+                        "surface-container-high": "#eae7ef",
+                        "primary-container": "#312e81",
+                        "surface": "#fcf8ff",
+                        "on-primary-fixed": "#100563",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#e2dfff",
+                        "primary": "#1a146b",
+                        "tertiary-fixed-dim": "#ffb688",
+                        "on-secondary-container": "#54647a",
+                        "secondary-fixed": "#d3e4fe",
+                        "tertiary": "#3e1a00",
+                        "secondary-container": "#d0e1fb",
+                        "outline-variant": "#c8c5d3",
+                        "on-tertiary-fixed-variant": "#70380b",
+                        "on-tertiary-fixed": "#311300",
+                        "surface-container-highest": "#e5e1e9",
+                        "surface-container": "#f0ecf4",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-primary-container": "#9c9af4",
+                        "on-background": "#1b1b21",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-primary-fixed-variant": "#3e3c8f",
+                        "surface-tint": "#5654a8",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "error-container": "#ffdad6",
+                        "outline": "#777682",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdbc7",
+                        "inverse-primary": "#c3c0ff",
+                        "on-surface-variant": "#474651",
+                        "surface-variant": "#e5e1e9",
+                        "secondary": "#505f76",
+                        "surface-dim": "#dcd9e0",
+                        "tertiary-container": "#5f2b00",
+                        "on-surface": "#1b1b21"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-padding-sm": "12px",
+                        "container-padding-md": "16px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "stack-xs": "4px",
+                        "max-width-desktop": "1440px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "mono-sm": ["JetBrains Mono"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "mono-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-hidden">
+<!-- App Shell Container -->
+<div class="flex h-screen w-full">
+<!-- SideNavBar Component -->
+<nav class="hidden md:flex flex-col h-screen w-64 bg-surface-container-low border-r border-outline-variant py-gutter px-stack-md gap-stack-md shrink-0 z-40">
+<!-- Header -->
+<div class="flex flex-col items-start gap-stack-xs pb-stack-md border-b border-outline-variant">
+<div class="flex items-center gap-stack-sm w-full">
+<img alt="SurfaceGate Logo" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC48C-e2OX5K2x-QjWcDXQ2HnswvH7x9dLsSNdVNWmCA_rMatzWsyBd7M4a5crLO19DtPGynZawsWX4OY8OxZc62aVwRf1ZRX-ody8mLZINfhV0VZKQLJRYmnLd0mPm7G5BRkQwfKcUxC8jx1-4hh9K4_yiln-VHCfNbTfKk34v89RFfbcmoRKcvWuZsi1ubXA66fyh1B4N6N8tVvUizwA9GWdcxIabOQXPYCoLU4IV-iabxC8zAjtkGTl08hj4JcBHXiqY9gctprUy"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-black text-primary">SurfaceGate</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Desk Ops</span>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md h-8 rounded flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                New Ticket
+            </button>
+<!-- Main Navigation -->
+<div class="flex flex-col gap-1 flex-1 overflow-y-auto mt-stack-sm">
+<!-- Inactive Tab -->
+<a class="flex items-center gap-stack-sm px-stack-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-md text-label-md">Operations</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex items-center gap-stack-sm px-stack-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">view_kanban</span>
+<span class="font-label-md text-label-md">Queue</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex items-center gap-stack-sm px-stack-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="font-label-md text-label-md">Workload</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex items-center gap-stack-sm px-stack-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="font-label-md text-label-md">Insights</span>
+</a>
+<!-- Active Tab -->
+<a class="flex items-center gap-stack-sm px-stack-sm py-2 rounded-lg bg-secondary-container text-on-secondary-container font-bold translate-x-1 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span class="font-label-md text-label-md">Editor</span>
+</a>
+<!-- Inactive Tab -->
+<a class="flex items-center gap-stack-sm px-stack-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</div>
+<!-- Footer Navigation -->
+<div class="flex flex-col gap-1 border-t border-outline-variant pt-stack-sm mt-auto">
+<a class="flex items-center gap-stack-sm px-stack-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">contact_support</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+<a class="flex items-center gap-stack-sm px-stack-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all text-error" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex flex-col flex-1 w-full bg-surface-dim overflow-hidden">
+<!-- TopAppBar Component -->
+<header class="flex items-center justify-between px-gutter w-full h-14 bg-surface border-b border-outline-variant shrink-0 z-50">
+<!-- Left: Search (Hidden on md to prevent overlap with sidebar visual hierarchy, visible on mobile if needed) -->
+<div class="flex items-center gap-stack-sm w-1/3">
+<div class="relative w-full max-w-xs hidden md:block">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container h-8 pl-8 pr-2 rounded border border-outline-variant text-body-sm focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all placeholder:text-on-surface-variant/70" placeholder="Search tickets..." type="text"/>
+</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden p-1 text-on-surface hover:bg-surface-container-high rounded transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Center: Product Name (Mobile focus) -->
+<div class="flex-1 flex justify-center md:hidden">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">SurfaceGate Desk</span>
+</div>
+<!-- Right: Actions & Profile -->
+<div class="flex items-center justify-end gap-stack-sm w-1/3">
+<button class="p-1 text-primary hover:bg-surface-container-high rounded transition-colors relative" title="notifications">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-1 text-primary hover:bg-surface-container-high rounded transition-colors" title="history">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</button>
+<button class="p-1 text-primary hover:bg-surface-container-high rounded transition-colors" title="help">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</button>
+<div class="h-6 w-px bg-outline-variant mx-1"></div>
+<img alt="Agent Profile" class="w-8 h-8 rounded-full border border-outline-variant cursor-pointer hover:opacity-80 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrhfb_H6YgKTApFykX43U6jScLyYxh4jYGjd_HvNpFZbDLo0-8ZghxzqXi0hpY5-V0mi-n9ZRWKlVfB1kRa_SaVHdK00s19JT2Oamz6TCRBNw5pp23URWxQDMrca9MJgehN9_bM_MakFYgwMrQa5sAxTAh6zKGluLgaUZbVausWLoIOoTNjQDLZMMJe4oI98PIv45bbIeH32ar6p12a4KHmhgLYb8mh21JCpoBQknxREHiA1SOfgfqqjyhYn1cU1z8qddot3i4XKxq"/>
+</div>
+</header>
+<!-- Scrollable Canvas -->
+<main class="flex-1 overflow-y-auto p-gutter relative">
+<div class="max-w-[1024px] mx-auto w-full flex flex-col gap-stack-md">
+<!-- Editor Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-stack-sm bg-surface p-container-padding-md border border-outline-variant rounded-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-stack-sm">
+<h1 class="font-headline-md text-headline-md text-on-surface">Edit Ticket #SG-4921</h1>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-mono-sm text-mono-sm rounded">DRAFT</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error inline-block"></span> Latency: 12ms
+                                </span>
+<span class="text-outline-variant text-label-sm">•</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Last saved: 2 mins ago</span>
+</div>
+</div>
+<div class="flex items-center gap-stack-sm">
+<button class="px-4 h-8 bg-surface-variant text-on-surface-variant font-label-md text-label-md rounded border border-outline-variant hover:bg-surface-container-high transition-colors" onclick="console.log('ACT_CANCEL_EDIT')">
+                                Cancel
+                            </button>
+<button class="px-4 h-8 bg-primary text-on-primary font-label-md text-label-md rounded flex items-center gap-2 hover:bg-primary/90 transition-colors shadow-sm" onclick="console.log('ACT_SAVE_RECORD')">
+<span class="material-symbols-outlined text-[16px]">save</span>
+                                Save Ticket
+                            </button>
+</div>
+</div>
+<!-- Editor Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-md items-start">
+<!-- Main Form Area (Left/Wide Column) -->
+<div class="lg:col-span-8 flex flex-col gap-stack-md">
+<!-- Basic Details Card -->
+<div class="bg-surface border border-outline-variant rounded-lg p-container-padding-md flex flex-col gap-stack-md shadow-sm">
+<!-- Title Field -->
+<div class="flex flex-col gap-1 relative">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="ticket-title">
+                                        Subject <span class="text-error">*</span>
+</label>
+<input class="w-full bg-surface border border-outline-variant rounded h-10 px-3 font-body-lg text-body-lg text-on-surface focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all placeholder:text-outline" id="ticket-title" type="text" value="Database Connection Timeout on Production Server"/>
+<!-- Validation Error Example (Hidden by default) -->
+<span class="hidden font-label-sm text-label-sm text-error absolute -bottom-5 left-0">Title is required.</span>
+</div>
+<!-- Description Field -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="ticket-desc">
+                                        Description
+                                        <button class="text-primary hover:underline font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> Improve formatting
+                                        </button>
+</label>
+<div class="border border-outline-variant rounded bg-surface focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/10 transition-all">
+<!-- WYSIWYG Toolbar (Visual Only) -->
+<div class="flex items-center gap-1 p-1 border-b border-outline-variant bg-surface-container-lowest">
+<button class="p-1 text-on-surface-variant hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-[16px]">format_bold</span></button>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-[16px]">format_italic</span></button>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-[16px]">code</span></button>
+<div class="w-px h-4 bg-outline-variant mx-1"></div>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-[16px]">format_list_bulleted</span></button>
+<button class="p-1 text-on-surface-variant hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-[16px]">attach_file</span></button>
+</div>
+<textarea class="w-full bg-transparent border-none p-3 font-body-md text-body-md text-on-surface focus:ring-0 resize-y min-h-[150px]" id="ticket-desc" placeholder="Provide detailed context..." rows="8">Since the deployment at 02:00 UTC, the main application service is reporting intermittent connection timeouts to the primary PostgreSQL cluster. 
+
+Logs indicate connection pooling limits might be reached, but current metrics show connection count is well below max_connections.
+
+Need DBA review immediately.</textarea>
+</div>
+</div>
+</div>
+<!-- Attachments Card -->
+<div class="bg-surface border border-outline-variant rounded-lg p-container-padding-md flex flex-col gap-stack-sm shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface border-b border-outline-variant pb-2">Attachments</h3>
+<div class="flex flex-col gap-2 mt-2">
+<!-- Attachment Item -->
+<div class="flex items-center justify-between p-2 border border-outline-variant rounded bg-surface-container-lowest hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-error/10 text-error rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface line-clamp-1">db_error_logs_0200.pdf</span>
+<span class="font-mono-sm text-mono-sm text-outline">1.2 MB</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<!-- Dropzone -->
+<div class="border-2 border-dashed border-outline-variant rounded p-4 flex flex-col items-center justify-center gap-2 text-center bg-surface-bright hover:bg-surface-container-low transition-colors cursor-pointer mt-2">
+<span class="material-symbols-outlined text-[24px] text-on-surface-variant">cloud_upload</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Drag and drop files here or <span class="text-primary font-medium">browse</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Metadata (Right/Narrow Column) -->
+<div class="lg:col-span-4 flex flex-col gap-stack-md">
+<div class="bg-surface border border-outline-variant rounded-lg flex flex-col shadow-sm">
+<div class="p-container-padding-sm border-b border-outline-variant bg-surface-container-lowest rounded-t-lg">
+<h3 class="font-label-md text-label-md text-on-surface">Classification</h3>
+</div>
+<div class="p-container-padding-md flex flex-col gap-stack-md">
+<!-- Status Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Status</label>
+<div class="relative">
+<select class="w-full bg-surface border border-outline-variant rounded h-9 px-3 font-body-sm text-body-sm text-on-surface appearance-none focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none cursor-pointer">
+<option>New</option>
+<option selected="">In Progress</option>
+<option>Awaiting Feedback</option>
+<option>Resolved</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Priority Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Priority</label>
+<div class="relative">
+<select class="w-full bg-error/10 border border-error/20 rounded h-9 px-3 font-label-md text-label-md text-error appearance-none focus:border-error focus:ring-1 focus:ring-error focus:outline-none cursor-pointer">
+<option>Low</option>
+<option>Medium</option>
+<option>High</option>
+<option selected="">Critical</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-error text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface border border-outline-variant rounded-lg flex flex-col shadow-sm">
+<div class="p-container-padding-sm border-b border-outline-variant bg-surface-container-lowest rounded-t-lg">
+<h3 class="font-label-md text-label-md text-on-surface">Assignment</h3>
+</div>
+<div class="p-container-padding-md flex flex-col gap-stack-md">
+<!-- Assignee -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Assigned Agent</label>
+<div class="relative flex items-center border border-outline-variant rounded bg-surface h-9 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<div class="pl-2 flex items-center">
+<img alt="Sarah Chen" class="w-5 h-5 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvWQoewf62481njD6MDdcxR8u9gtDFdq8J_T2ZfMx_H0PyXfqGGELsNpsOX_HnwqeNWP4Kn-Sjr_25GR5dHJw0gUIhCGgi_LdqpRdH3Wm0QqFXA85xsuLKsMTGhE5-SP9LJ-ke-3FjOyNdNbioecojkfgPvwrPmQqGHnu2SNhPP15LFLy7wB2LQrb5ZY_KuIjyLtIj0DyKUuM9LqmOZlH5In30R1jMM8F17Y8NwMz3qTbDpd0p1XuzWUAwuLGcHixt8x2a-XtczUcF"/>
+</div>
+<input class="w-full bg-transparent border-none px-2 font-body-sm text-body-sm text-on-surface focus:ring-0" type="text" value="Sarah Chen"/>
+<button class="pr-2 text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+</div>
+<!-- Watchers -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Watchers</label>
+<div class="flex items-center gap-1 flex-wrap">
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-full border border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-surface">DevOps Team</span>
+<span class="material-symbols-outlined text-[12px] cursor-pointer hover:text-error">close</span>
+</div>
+<button class="flex items-center justify-center w-6 h-6 rounded-full border border-dashed border-outline-variant text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface border border-outline-variant rounded-lg flex flex-col shadow-sm">
+<div class="p-container-padding-sm border-b border-outline-variant bg-surface-container-lowest rounded-t-lg">
+<h3 class="font-label-md text-label-md text-on-surface">Tags</h3>
+</div>
+<div class="p-container-padding-md flex flex-col gap-stack-sm">
+<div class="flex items-center border border-outline-variant rounded bg-surface h-9 px-2 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant mr-1">sell</span>
+<input class="w-full bg-transparent border-none p-0 font-body-sm text-body-sm text-on-surface focus:ring-0 placeholder:text-outline-variant" placeholder="Add tag..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="px-2 py-1 bg-primary/10 text-primary border border-primary/20 rounded font-mono-sm text-mono-sm flex items-center gap-1">
+                                            #database <span class="material-symbols-outlined text-[12px] cursor-pointer hover:text-primary">close</span>
+</span>
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container border border-outline-variant rounded font-mono-sm text-mono-sm flex items-center gap-1">
+                                            #outage <span class="material-symbols-outlined text-[12px] cursor-pointer hover:text-on-secondary-container">close</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

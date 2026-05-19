@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SurfaceGate Desk - Operations Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fcf8ff",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-container-low": "#f6f2fa",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#474651",
+                        "tertiary": "#3e1a00",
+                        "on-primary-fixed-variant": "#3e3c8f",
+                        "tertiary-fixed-dim": "#ffb688",
+                        "inverse-surface": "#303036",
+                        "surface-tint": "#5654a8",
+                        "surface": "#fcf8ff",
+                        "on-tertiary-fixed": "#311300",
+                        "tertiary-fixed": "#ffdbc7",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#d0e1fb",
+                        "primary-container": "#312e81",
+                        "on-secondary-container": "#54647a",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3eff7",
+                        "tertiary-container": "#5f2b00",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#9c9af4",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "outline": "#777682",
+                        "on-primary-fixed": "#100563",
+                        "on-background": "#1b1b21",
+                        "secondary-fixed": "#d3e4fe",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "primary": "#1a146b",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dcd9e0",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#c3c0ff",
+                        "surface-container-highest": "#e5e1e9",
+                        "outline-variant": "#c8c5d3",
+                        "surface-variant": "#e5e1e9",
+                        "surface-container-high": "#eae7ef",
+                        "on-tertiary-fixed-variant": "#70380b",
+                        "surface-container": "#f0ecf4",
+                        "secondary": "#505f76",
+                        "background": "#fcf8ff",
+                        "on-tertiary-container": "#de915e",
+                        "on-surface": "#1b1b21"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "max-width-desktop": "1440px",
+                        "unit": "4px",
+                        "container-padding-sm": "12px",
+                        "stack-xs": "4px",
+                        "stack-sm": "8px",
+                        "gutter": "16px",
+                        "stack-md": "16px",
+                        "container-padding-md": "16px"
+                    },
+                    "fontFamily": {
+                        "mono-sm": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "mono-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1b1b21; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.filled { font-variation-settings: 'FILL' 1; }
+        .border-sl-slate { border-color: #E2E8F0; }
+        .bg-sl-slate-100 { background-color: #F1F5F9; }
+        .text-sl-slate-900 { color: #0F172A; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col m-0 p-0 overflow-hidden bg-[#F8FAFC]">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-container-padding-md h-12 bg-surface dark:bg-surface-dim border-b border-outline-variant flat no shadows">
+<div class="flex items-center gap-4 w-1/3">
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim tracking-tight">SurfaceGate Desk</span>
+</div>
+<div class="flex items-center w-1/3 justify-center">
+<!-- Search Bar (on_left logic handled in layout) -->
+<div class="relative w-full max-w-md hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-8 pl-9 pr-3 bg-surface-container-high border border-outline-variant rounded-DEFAULT font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Search operational data..." type="text"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 w-1/3">
+<button class="w-8 h-8 flex items-center justify-center rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- App Layout -->
+<div class="flex flex-1 pt-12 h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="hidden md:flex fixed left-0 top-12 h-[calc(100vh-48px)] flex-col z-40 bg-surface-container-low dark:bg-surface-container-lowest docked left-0 h-full w-64 border-r border-outline-variant flat no shadows">
+<div class="p-container-padding-md border-b border-outline-variant flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-headline-sm font-bold">U</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">User Profile</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Operational Center</span>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto py-2">
+<ul class="flex flex-col">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 my-1 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Operations</span>
+</a>
+</li>
+<li>
+<!-- ACTIVE TAB LOGIC -->
+<a class="flex items-center gap-3 px-4 py-2 my-1 border-l-4 border-primary bg-secondary-container text-on-secondary-container font-bold hover:bg-surface-container-highest transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">view_list</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Queue</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 my-1 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Workload</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 my-1 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Insights</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 my-1 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Editor</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 my-1 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Settings</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="mt-auto border-t border-outline-variant p-2">
+<ul class="flex flex-col">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 my-1 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Support</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 my-1 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">history</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Logs</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-64 p-gutter overflow-y-auto bg-[#F8FAFC]">
+<!-- Page Header -->
+<div class="mb-gutter flex items-center justify-between">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Queue Management</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Review and manage active operational tickets.</p>
+</div>
+<div class="flex gap-2">
+<button class="h-8 px-3 rounded-DEFAULT bg-sl-slate-100 text-sl-slate-900 border border-outline-variant font-label-md text-label-md flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+                        Refresh
+                    </button>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- State 1: System-Level Error (Data Connection Lost) -->
+<div class="xl:col-span-12 bg-white border border-sl-slate rounded-DEFAULT p-container-padding-md flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error filled">wifi_off</span>
+</div>
+<div class="flex-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Data Connection Lost</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 max-w-2xl">
+                            We're unable to reach the server to fetch the latest operational data. This may be due to a network interruption or scheduled maintenance on the core services.
+                        </p>
+<button class="h-8 px-4 rounded-DEFAULT bg-primary text-on-primary font-label-md text-label-md flex items-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+                            ACT_RETRY_LOAD
+                        </button>
+</div>
+</div>
+<!-- State 2: No Search Results (Filtered Away) -->
+<div class="xl:col-span-6 bg-white border border-sl-slate rounded-DEFAULT overflow-hidden flex flex-col h-[400px]">
+<div class="p-container-padding-sm border-b border-sl-slate bg-[#F8FAFC] flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Filtered View: High Priority</span>
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded-DEFAULT bg-surface-container-highest text-on-surface-variant font-mono-sm text-mono-sm">Status: Open</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-8 text-center bg-white">
+<div class="w-16 h-16 rounded-full bg-surface-container mb-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">No matching tickets found</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 max-w-sm">
+                            Your current filter criteria is too restrictive. Try broadening your search or clearing active filters to see more results.
+                        </p>
+<div class="flex gap-3">
+<button class="h-8 px-4 rounded-DEFAULT bg-sl-slate-100 text-sl-slate-900 border border-outline-variant font-label-md text-label-md flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">filter_alt_off</span>
+                                ACT_RETRY_LOAD
+                            </button>
+<button class="h-8 px-4 rounded-DEFAULT bg-primary text-on-primary font-label-md text-label-md flex items-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                                ACT_CREATE_RECORD
+                            </button>
+</div>
+</div>
+</div>
+<!-- State 3: Empty State (Initial Setup) -->
+<div class="xl:col-span-6 bg-white border border-sl-slate rounded-DEFAULT overflow-hidden flex flex-col h-[400px]">
+<div class="p-container-padding-sm border-b border-sl-slate bg-[#F8FAFC] flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Category: Compliance Review</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-8 text-center bg-white">
+<div class="w-16 h-16 rounded-full bg-surface-container mb-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant">inbox</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">No tickets yet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 max-w-sm">
+                            This queue is currently empty. When new compliance review requests are generated or assigned to this category, they will appear here.
+                        </p>
+<button class="h-8 px-4 rounded-DEFAULT border border-outline text-on-surface font-label-md text-label-md flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">add_box</span>
+                            ACT_CREATE_RECORD
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

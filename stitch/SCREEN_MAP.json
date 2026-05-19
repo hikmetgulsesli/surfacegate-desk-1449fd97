@@ -1,0 +1,76 @@
+[
+  {
+    "screenId": "3df83d29b6ec44bc888596588bb68dde",
+    "name": "Queue and Status Management",
+    "type": "app-screen",
+    "description": "Queue and Status Management screen",
+    "surfaceIds": [
+      "SURF_QUEUE_AND_STATUS_MANAGEMENT",
+      "SURF_AGENT_WORKLOAD"
+    ]
+  },
+  {
+    "screenId": "a1d455fb4a5342efb92ff842b3580454",
+    "name": "Ticket Editor",
+    "type": "form",
+    "description": "Ticket Editor screen",
+    "surfaceIds": [
+      "SURF_TICKET_EDITOR",
+      "SURF_QUEUE_AND_STATUS_MANAGEMENT",
+      "SURF_SETTINGS_AND_PREFERENCES"
+    ]
+  },
+  {
+    "screenId": "bf706db57d0848f4a9e04fd6320a6658",
+    "name": "Insights",
+    "type": "app-screen",
+    "description": "Insights screen",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  },
+  {
+    "screenId": "842517c156124c359ace03fc5061e57a",
+    "name": "Ticket Operations",
+    "type": "app-screen",
+    "description": "Ticket Operations screen",
+    "surfaceIds": [
+      "SURF_TICKET_OPERATIONS",
+      "SURF_TICKET_EDITOR",
+      "SURF_QUEUE_AND_STATUS_MANAGEMENT",
+      "SURF_AGENT_WORKLOAD",
+      "SURF_INSIGHTS",
+      "SURF_SETTINGS_AND_PREFERENCES",
+      "SURF_EMPTY_AND_ERROR_RECOVERY"
+    ]
+  },
+  {
+    "screenId": "a4eafe7328d2496887245de1552dd7a6",
+    "name": "Agent Workload",
+    "type": "app-screen",
+    "description": "Agent Workload screen",
+    "surfaceIds": [
+      "SURF_AGENT_WORKLOAD"
+    ]
+  },
+  {
+    "screenId": "9fcf101e1f4741eda5efa1047b507dd5",
+    "name": "Empty and Error Recovery",
+    "type": "error",
+    "description": "Empty and Error Recovery screen",
+    "surfaceIds": [
+      "SURF_TICKET_OPERATIONS",
+      "SURF_INSIGHTS",
+      "SURF_EMPTY_AND_ERROR_RECOVERY"
+    ]
+  },
+  {
+    "screenId": "a57749d57b724f42a063f36a14800cba",
+    "name": "Settings and Preferences",
+    "type": "settings",
+    "description": "Settings and Preferences screen",
+    "surfaceIds": [
+      "SURF_SETTINGS_AND_PREFERENCES"
+    ]
+  }
+]
